@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentario DRE</title>
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel="icon" href="../static/DRE.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">DRE-Direccion Regional de Educación</div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#cargar">Cargar Documento</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero-section">
+    <div class="hero-image">
+      <img src="../static/DRE.png" alt="Logo DRE">
+    </div>
+    <div class="hero-text">
+      <h1>Bienvenido al Sistema de Postulación de la DRE</h1>
+      <p>Sube tu documento para postular a las áreas de Tesorería, Recursos Humanos o Pedagogía.</p>
+      <a href="#cargar" class="btn">EMPEZAR</a>
+    </div>
+  </main>
+
+  <!-- Sección para cargar documento -->
+  <section id="cargar" class="upload-section">
+    <h2>Cargar Documento</h2>
+    <form>
+      <label for="documento">Selecciona tu archivo (PDF o Word):</label>
+      <input type="file" id="documento" name="documento" accept=".pdf,.doc,.docx" required>
+      <button type="submit" class="btn">Subir</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Dirección Regional de Educación. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
