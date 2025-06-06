@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aprobación de Documentos</title>
+  <link rel="stylesheet" href="../static/ducstyles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Lado izquierdo: Subir documento -->
+    <div class="upload-panel">
+      <h2>Subir Documento</h2>
+      <input type="file" id="archivo" accept=".pdf,.doc,.docx">
+      <button onclick="simularCarga()">Subir</button>
+    </div>
+
+    <!-- Lado derecho: Estado de áreas -->
+    <div class="status-panel">
+      <h2>Estados de Evaluación</h2>
+
+      <div class="area-row">
+        <div class="area-info">
+          <h3>Tesorería</h3>
+          <p id="estado-tesoreria">Esperando archivo...</p>
+        </div>
+        <div class="circle" id="circle-tesoreria">0%</div>
+      </div>
+
+      <div class="area-row">
+        <div class="area-info">
+          <h3>Recursos Humanos</h3>
+          <p id="estado-rrhh">Esperando archivo...</p>
+        </div>
+        <div class="circle" id="circle-rrhh">0%</div>
+      </div>
+
+      <div class="area-row">
+        <div class="area-info">
+          <h3>Pedagogía</h3>
+          <p id="estado-pedagogia">Esperando archivo...</p>
+        </div>
+        <div class="circle" id="circle-pedagogia">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function simularCarga() {
+      const porcentajes = [0, 25, 50, 75, 100];
+      let index = 0;
+
+      const interval = setInterval(() => {
+        if (index >= porcentajes.length) {
+          clearInterval(interval);
+          document.getElementById("estado-tesoreria").textContent = "Aprobado";
+          document.getElementById("estado-rrhh").textContent = "Aprobado";
+          document.getElementById("estado-pedagogia").textContent = "Aprobado";
+          return;
+        }
+
+        const val = porcentajes[index] + "%";
+        document.getElementById("circle-tesoreria").textContent = val;
+        document.getElementById("circle-rrhh").textContent = val;
+        document.getElementById("circle-pedagogia").textContent = val;
+        index++;
+      }, 500);
+    }
+  </script>
+</body>
+</html>

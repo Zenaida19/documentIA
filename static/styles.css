@@ -107,3 +107,51 @@ body {
   background-color: #003366;
   color: white;
 }
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background-color: #f4f4f4;
+  gap: 40px;
+}
+
+.hero-image img {
+  max-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.hero-text .btn {
+  background-color: #003366;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.upload-section {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.upload-section form {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.upload-section .btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
